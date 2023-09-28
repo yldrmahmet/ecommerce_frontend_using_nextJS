@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* 
+reset kodlari
+scroll-behavior: smooth değeri, sayfa üzerindeki kaydırmaların daha pürüzsüz ve animasyonlu olmasını sağlayacak
+*/
+/*
+::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+  opacity: 0
+}
+sayfada scroll bar olmayacak*/
+
+header {
+
+  width: 100%;
+  top: 0;
+  /* headerin ustunu sabitle */
+  right: 0;
+  /* headerin sagini sabitle */
+  z-index: 1000;
+  /* diger ogelerin ustunde olmasini saglar deger yukseldikce */
+  display: flex;
+  /* yanyana gelmeyi sagliyo */
+  align-items: center;
+  justify-content: space-between;
+  /* genislige elemanlari yayacak */
+  padding: 20px 1% 20px 5%;
+  margin: 10px 0 0 0;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+  margin: 0 10px 0 0;
+}
+
+.logo img:hover {
+  transform: scale(1.5);
+  transition: all .60s ease;
+}
+
+/* logonun ustune gelince yavasca buyuyecek*/
+
+
+.navmenu {
+  display: flex;
+  /* menu elemanlari yanyana gelir*/
+}
+
+.navmenu li {
+  padding: 10px 20px;
+  margin: 0 10px 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all .50s ease;
+  border: 2px solid #2c2c2c;
+  background-color: #7c5858;
+  border-radius: 5px;
+}
+
+.navmenu a {
+  color: azure;
+
+
+
+}
+
+.navmenu a:hover {
+  color: #ee1c47;
+  border: 0;
+}
+
+.navmenu li:hover {
+  transform: scale(1.2);
+  transition: all .90s ease;
+
+}
+
+@media screen and (max-width: 768px) {
+
+  /* ekran kucukse */
+  .navmenu {
+    flex-direction: column;
+    /* Öğeleri yatay yerine dikey düzende sırala */
+    align-items: center;
+    /* Öğeleri ortala */
+  }
+
+  .navmenu li {
+    margin: 10px 0;
+    /* Öğeler arasındaki boşluğu ayarla */
+  }
+
+  .navmenu a {
+    margin: 0;
+    /* Öğeler arasındaki yatay boşluğu sıfırla */
+  }
+}
+
+.leftSidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #7c5858;
+  top: 0;
+  border-radius: 8px;
+  right: -60%;
+}
+
+.leftSidebar.active {
+  left: 0;
+}
+
+.leftSidebar ul li {
+  list-style: none;
+  padding: 10px 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.leftSidebar ul li:hover {
+  background-color: #c9944f;
+}
+
+.leftSidebar ul li .s {
+  color: aliceblue;
+}
+
+.leftSidebarButton:before {
+  position: absolute;
+
+}
+
+.navicon {
+  display: flex;
+}
+
+.navicon .a {
+  /* iconlarin siteden font kodlarini aldigimiz icin bir yazi gibi islem yapiyoruz*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  transition: all .60s ease;
+  border: 1px solid #2c2c2c;
+  border-radius: 5px;
+  background-color: #c9944f;
+}
+
+.navicon .a:hover {
+  transform: scale(1.7);
+}
+
+#menuicon {
+  /* en sondaki iconu ayri yazicaz*/
+  font-size: 40px;
+  color: azure;
+  z-index: 10001;
+  /* menu iconu katman olarak hepsinden buyuk olmali. ssagi dogru acilacak gorunmesi gerekio*/
+  cursor: pointer;
+  border: 1px solid #2c2c2c;
+  background-color: #7c5858;
+  transition: all .60s ease;
+}
+
+#menuicon:hover {
+  transform: scale(1.5);
+  color: #ee1c47;
+  border: 0
+}
+
+.mainhome {
+  padding: 0 15%;
+  /* reklam alani */
+  margin-top: 30px;
+  /* position fixed olan headeri gormuyor bu sebeple ust taraftan bosluk birakildi*/
+  width: 100%;
+  height: 65vh;
+  /*responsive*/
+  display: flex;
+
+}
+
+.maintext {
+  /* yanina tablo gelicek*/
+  margin: 0;
+}
+
+.maintext h1 {
+  /* slogan*/
+  color: #2c2c2c;
+  font-size: 45px;
+  text-transform: capitalize;
+  font-weight: 650;
+  line-height: 1.1;
+}
+
+.maintext .indirim {
+  color: rgb(163, 62, 62);
+}
+
+.maintext h1:hover {
+  transform: scale(1.1);
+  transition: all .60s ease;
+  color: #f00
+}
+
+.maintext button {
+  /* en ucuz bilgisayara gecis butonu*/
+  background-color: #7c5858;
+  width: 200px;
+  height: 50px;
+  line-height: 30px;
+  border: 2px solid #2c2c2c;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
+
+.maintext button:hover {
+  transform: scale(1.2);
+  transition: all .60s ease;
+}
+
+.maintext button a {
+  color: azure;
+
+}
+
+.maintext button a:hover {
+  color: #ee1c47;
+  text-shadow: 2px 2px #333c56;
+}
+
+.maintext p {
+  color: #333c56;
+  font-size: 20px;
+}
+
+.maintext p:hover {
+  transform: scale(1.2);
+  transition: all .60s ease;
+}
+
+.tables {
+  max-width: 600px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.x1 {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  border: 1px solid #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.x1:hover {
+  transform: scale(1.5);
+  transition: all .60s ease;
+  border: 0;
+  background-color: azure;
+  cursor: pointer;
+}
+
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background-color: #7c5858;
+  top: 0;
+  border-radius: 8px;
+  right: -60%;
+  transition: right 0.5s ease;
+}
+
+#sidebar.active {
+  right: 0;
+}
+
+#menuicon {
+  font-size: 40px;
+  color: azure;
+  z-index: 10001;
+  cursor: pointer;
+  border: 1px solid #2c2c2c;
+  background-color: #7c5858;
+  transition: all .60s ease;
+}
+
+#menuicon:hover {
+  transform: scale(1.5);
+  color: #ee1c47;
+  border: 0;
+}

@@ -1,0 +1,58 @@
+{
+    "masaustu": [
+      {
+        "id": 1,
+        "ad": "pc1",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 100
+      },
+      {
+        "id": 2,
+        "ad": "pc2",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 3,
+        "ad": "pc3",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 4,
+        "ad": "pc4",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 5,
+        "ad": "pc5",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 6,
+        "ad": "pc6",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 7,
+        "ad": "pc7",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 8,
+        "ad": "pc8",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      },
+      {
+        "id": 9,
+        "ad": "pc9",
+        "aciklama": "lorem ipsum dolor sit amet",
+        "fiyat": 150
+      }
+    ]
+  }
